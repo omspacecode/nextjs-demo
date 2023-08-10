@@ -40,10 +40,17 @@ export async function getStaticProps({
         },
       })
       .toPromise()) || null
-
+  
+  const dataModel = await builder.getAll('artworks', {
+        options: {
+          vercelPreview: true,
+        },
+      })
+  
   return {
     props: {
       page,
+      dataModel,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
@@ -65,7 +72,7 @@ export async function getStaticPaths() {
 }
 
 export default function Page({
-  page,
+  page, dataModel
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
   const isPreviewingInBuilder = useIsPreviewing()
@@ -86,6 +93,7 @@ export default function Page({
       ) : (
         <BuilderComponent model="page" content={page} data={{myCars: cars}} />
       )}
+      <div>{dataModel[0].name}</div>
     </>
   )
 }
