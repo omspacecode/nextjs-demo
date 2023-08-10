@@ -24,7 +24,7 @@ let cars = [
     "registration": new Date('2018-03-03'),
     "capacity": 5
   }
-]; 
+];
 
 export async function getStaticProps({
   params,
