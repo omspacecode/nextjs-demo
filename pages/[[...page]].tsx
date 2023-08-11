@@ -93,6 +93,8 @@ export default function Page({
       ) : (
         <BuilderComponent model="page" content={page} data={{myCars: cars}} />
       )}
+      <div>Here: {page.data.title}</div>
+      <br />
       <div>{dataModel[0].name}</div>
     </>
   )
