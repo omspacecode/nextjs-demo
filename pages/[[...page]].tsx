@@ -95,7 +95,7 @@ export default function Page({
       )}
       <div>Here: {page.data.title}</div>
       <br />
-      <div>{dataModel[0].name}</div>
+      <div data-vercel-edit-target>{dataModel[0].name}</div>
     </>
   )
 }
