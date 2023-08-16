@@ -35,9 +35,6 @@ export async function getStaticProps({
         userAttributes: {
           urlPath: '/' + (params?.page?.join('/') || ''),
         },
-        options: {
-          vercelPreview: true,
-        },
       })
       .toPromise()) || null
   
