@@ -43,7 +43,7 @@ export async function getStaticProps({
   
   const dataModel = await builder.getAll('artworks', {
         options: {
-          vercelPreview: process.env.VERCEL_ENV === 'preview',
+          vercelPreview: true,
         },
       })
   
