@@ -85,13 +85,11 @@ export default function Page({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {!page && <meta name="robots" content="noindex" />}
       </Head>
-      <div>{dataModel[1].name}</div> 
       {show404 ? (
         <DefaultErrorPage statusCode={404} />
       ) : (
         <BuilderComponent model="page" content={page} data={{myCars: cars}} />
       )}
-      <div>{dataModel[0].name}</div> 
     </>
   )
 }
