@@ -9,6 +9,21 @@ import builderConfig from '@config/builder';
 import '@builder.io/widgets/dist/lib/builder-widgets-async'
 
 builder.init(builderConfig.apiKey)
+
+Builder.registerComponent(TrustpilotWidget, {
+  name: "Trustpilot Widget",
+  inputs: [
+    { name: "locale", type: "string", defaultValue: "en-US" },
+    { name: "templateId", type: "string", defaultValue: "53aa8912dec7e10d38f59f36" },
+    { name: "businessUnitId", type: "string", defaultValue: "639f548cf3952ee4a156d9ce" },
+    { name: "styleHeight", type: "string", defaultValue: "140px" },
+    { name: "styleWidth", type: "string", defaultValue: "100%" },
+    { name: "theme", type: "string", enum: ["light", "dark"], defaultValue: "light" },
+    { name: "stars", type: "string", defaultValue: "4,5" },
+    { name: "reviewLanguages", type: "string", defaultValue: "en" },
+  ],
+});
+
 builder.apiVersion = "v3";
 
 let cars = [
