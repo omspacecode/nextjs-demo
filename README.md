@@ -148,3 +148,4 @@ You can deploy anywhere you like, but for this project we recommend [Vercel](htt
 # nextjs-demo
 # nextjs-demo
 # nextjs-demo
+# nextjs-demo-app
